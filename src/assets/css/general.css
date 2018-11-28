@@ -1,0 +1,35 @@
+html {
+  font-size: 12px;
+  background-color: #f4f5f5;
+}
+
+ul {
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666;  
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666;  
+}
+
