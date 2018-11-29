@@ -17,16 +17,35 @@
           </ul>
         </nav>
         <ul class="entry-list">
-          <li class="item" v-for="item in contentList" :key="(item,index) in contentList">
+          <li
+            class="item"
+            v-for="item in contentList"
+            :key="(item,index) in contentList"
+          >
             <div class="content-box">
               <div class="info-box">
                 <div class="info-row meta-row">
                   <ul class="meta-list">
-                    <li class="item hot" v-if="item.meta.hot"><a>{{item.meta.hot}}</a></li>
-                    <li class="item post" v-if="item.meta.post"><a>{{item.meta.post}}</a></li>
-                    <li class="item username" v-if="item.meta.username"><a>{{item.meta.username}}</a></li>
-                    <li class="item time" v-if="item.meta.time"><a>{{item.meta.time}}</a></li>
-                    <li class="item tag" v-if="item.meta.tag"><a>{{item.meta.tag}}</a></li>
+                    <li
+                      class="item hot"
+                      v-if="item.meta.hot"
+                    ><a>{{item.meta.hot}}</a></li>
+                    <li
+                      class="item post"
+                      v-if="item.meta.post"
+                    ><a>{{item.meta.post}}</a></li>
+                    <li
+                      class="item username"
+                      v-if="item.meta.username"
+                    ><a>{{item.meta.username}}</a></li>
+                    <li
+                      class="item time"
+                      v-if="item.meta.time"
+                    ><a>{{item.meta.time}}</a></li>
+                    <li
+                      class="item tag"
+                      v-if="item.meta.tag"
+                    ><a>{{item.meta.tag}}</a></li>
                   </ul>
                 </div>
                 <div class="info-row title-row">
@@ -57,6 +76,7 @@
       </div>
       <aside class="welcome-side">
         <div class="shadow section auth-section">
+          <auth-section></auth-section>
         </div>
         <div class="shadow section tag-list">
         </div>
@@ -110,8 +130,12 @@
 </template>
 
 <script>
+import { authSection } from './components'
 export default {
   name: 'mainView',
+  components: {
+    authSection
+  },
   data () {
     return {
       topic: '热门文章',
@@ -140,7 +164,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -151,7 +176,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -162,7 +188,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -173,7 +200,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -184,7 +212,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -195,7 +224,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -206,7 +236,8 @@ export default {
           title: 'Vue.js 3.0 新特性预览',
           like: 67,
           dislike: 20
-        }, {
+        },
+        {
           meta: {
             hot: '热',
             post: '专栏',
@@ -382,6 +413,10 @@ export default {
 }
 .welcome-view .welcome-side .section {
   display: block;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
 }
 .welcome-view .welcome-side .follow-section {
   text-align: center;
